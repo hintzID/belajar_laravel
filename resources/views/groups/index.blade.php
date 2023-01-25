@@ -20,31 +20,25 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('students.create') }}" class="btn btn-md btn-success mb-3">Insert Student</a>
+                        <a href="{{ route('groups.create') }}" class="btn btn-md btn-success mb-3">Insert Student</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">NUMBER</th>
+                                <th scope="col">#</th>
+                                <th scope="col">USER ID</th>
                                 <th scope="col">NAME</th>
-                                <th scope="col">PHOTO</th>
-                                <th scope="col">EMAIL</th>
-                                <th scope="col">PHONE</th>
                                 <th scope="col">ACTION</th>
                               </tr>
                             </thead>
                             <tbody>
-                              @forelse ($students as $student)
+                              @forelse ($groups as $group)
                                 <tr>
-                                    <td>{{ $student->number }}</td>
-                                    <td>{{ $student->name }}</td>
+                                    <td>{{ $group->id}}</td>
+                                    <td>{{ $group->user_id }}</td>
+                                    <td>{{ $group->name }}</td>
                                     <td class="text-center">
-                                        <img src="{{ Storage::url('public/students/').$student->image }}" class="rounded" style="width: 150px">
-                                    </td>
-                                    <td>{{ $student->email }}</td>
-                                    <td>{{ $student->phone }}</td>
-                                    <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('students.destroy', $student->id) }}" method="POST">
-                                            <a href="{{ route('students.edit', $student->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('groups.destroy', $group->id) }}" method="POST">
+                                            <a href="{{ route('groups.edit', $group->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">DELETE</button>
@@ -58,7 +52,7 @@
                               @endforelse
                             </tbody>
                           </table>  
-                          {{ $students->links() }}
+                       
                     </div>
                 </div>
             </div>
