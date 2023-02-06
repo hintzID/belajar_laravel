@@ -1,4 +1,7 @@
-<table>
+@extends('layouts.admin')
+
+@section('content')
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -26,3 +29,4 @@
     </tbody>
 </table>
 <a href="{{ route('members.create') }}">Add member</a>
+@stop

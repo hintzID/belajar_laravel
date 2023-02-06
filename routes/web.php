@@ -33,9 +33,11 @@ Route::resource('/students', \App\Http\Controllers\StudentController::class);
 //route resource2
 Route::resource('/tests', \App\Http\Controllers\TestController::class);
 
+Route::resource('/schedules', \App\Http\Controllers\ScheduleController::class);
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 

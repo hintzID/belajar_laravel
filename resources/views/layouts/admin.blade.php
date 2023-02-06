@@ -88,9 +88,13 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="{{ route('logout') }}" onclick="event.preventDefault();
+      document.getElementById('logout-form').submit();">{{ __('Logout') }}({{ Auth::user()->name }})</a>
     </div>
   </div>
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
 </header>
 
 <div class="container-fluid">
@@ -105,27 +109,27 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/groups">
               <i class="fa-solid fa-book"></i>
-              Posts
+              Data Guru
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">              
+            <a class="nav-link" href="/members">              
               <i class="fa-solid fa-user"></i>
-              Students
+              Data Murid
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">              
+            <a class="nav-link" href="/schedules">              
               <i class="fa-solid fa-user"></i>
-              Presences
+              Jadwal
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">              
+            <a class="nav-link" href="/presence">              
               <i class="fa-solid fa-user"></i>
-              Schedules
+              Presensi
             </a>
           </li>
         </ul>

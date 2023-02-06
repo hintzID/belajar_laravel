@@ -1,3 +1,8 @@
+@extends('layouts.admin')
+
+@section('content')
+
+
 <form action="{{ route('groups.store') }}" method="post">
     @csrf
     <label for="user_id">User ID</label>
@@ -12,5 +17,5 @@
     <br>
     <button type="submit">Create</button>
 </form>
-
+@stop
 

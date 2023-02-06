@@ -46,5 +46,6 @@ class MemberController extends Controller
         $member->delete();
         return redirect()->route('members.index');
     }
+    
 }
 
