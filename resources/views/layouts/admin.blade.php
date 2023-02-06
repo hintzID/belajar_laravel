@@ -127,7 +127,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/presence">              
+            <a class="nav-link" href="/presences">              
               <i class="fa-solid fa-user"></i>
               Presensi
             </a>

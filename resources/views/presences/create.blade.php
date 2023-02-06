@@ -1,0 +1,53 @@
+@extends('layouts.admin')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Tambah Presence</div>
+
+                <div class="card-body">
+                    <form action="{{ route('presences.store') }}" method="post">
+                        @csrf
+
+                        <div class="form-group">
+                       <label for="schedule_id">Schedule ID</label>
+                       <select name="schedule_id" id="schedule_id" class="form-control">
+                        @foreach ($schedules as $schedule)
+                       <option value="{{ $schedule->id }}">{{ $schedule->group->name }}</option>
+                        @endforeach
+                       </select>
+                        </div>
+
+
+                        <div class="form-group">
+                       <label for="student_id">Student ID</label>
+                       <select name="student_id" id="student_id" class="form-control">
+                        @foreach ($students as $student)
+                       <option value="{{ $student->id }}">{{ $student->name }}</option>
+                        @endforeach
+                       </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presence">Presence</label>
+                            <select name="presence" class="form-control" required>
+                                <option value="hadir">Hadir</option>
+                                <option value="izin">Izin</option>
+                                <option value="sakit">Sakit</option>
+                                <option value="alpha">Alpha</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Note</label>
+                            <textarea name="note" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

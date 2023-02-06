@@ -34,6 +34,7 @@ Route::resource('/students', \App\Http\Controllers\StudentController::class);
 Route::resource('/tests', \App\Http\Controllers\TestController::class);
 
 Route::resource('/schedules', \App\Http\Controllers\ScheduleController::class);
+Route::resource('/presences', \App\Http\Controllers\PresenceController::class);
 
 
 Auth::routes();
