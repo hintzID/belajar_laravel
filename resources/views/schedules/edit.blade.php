@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('content')
+
 <div class="card-body">
                 <form action="{{ route('schedules.update', $schedule->id) }}" method="POST">
                     @csrf
@@ -39,3 +43,4 @@
     </div>
 </div>
 </div>
+@stop

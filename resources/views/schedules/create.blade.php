@@ -14,7 +14,7 @@
   </div>
   <div class="form-group">
   <label for="user_id">User ID</label>
-    <select name="user_id" id="user_id">
+    <select name="user_id" id="user_id" class="form-control">
         @foreach (App\Models\User::all() as $user)
             <option value="{{ $user->id }}">{{ $user->name }}</option>
         @endforeach

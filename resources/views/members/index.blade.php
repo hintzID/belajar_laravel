@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
+
+<a href="{{ route('members.create') }}" class="btn btn-success">Add member</a>
+<br>
+<br>
+
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -17,16 +22,16 @@
             <td>{{ $member->student->name }}</td>
             <td>{{ $member->group->name }}</td>
             <td>
-                <a href="{{ route('members.edit', $member->id) }}">Edit</a>
+                <a href="{{ route('members.edit', $member->id) }}" class="btn btn-primary btn-sm">Edit</a>
                 <form action="{{ route('members.destroy', $member->id) }}" method="post">
                     @csrf
                     @method('delete')
-                    <button type="submit">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                 </form>
             </td>
         </tr>
         @endforeach
     </tbody>
 </table>
-<a href="{{ route('members.create') }}">Add member</a>
+
 @stop
