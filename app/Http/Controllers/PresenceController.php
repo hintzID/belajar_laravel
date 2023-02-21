@@ -16,17 +16,22 @@ class PresenceController extends Controller
     }
 
     public function create()
-    {
+    {   
+        $presences = Presence::all();
         $schedules = Schedule::all();
         $students = Student::all();
-        return view('presences.create', compact('schedules','students'));
+        return view('presences.create', compact('schedules','students','presences'));
     }
 
-    public function store(Request $request)
-    {
-        Presence::create($request->all());
-        return redirect()->route('presences.index');
-    }
+// Modified store function
+public function store(Request $request)
+{   
+    Presence::create($request->all());
+    return redirect()->route('presences.index');
+}
+
+
+    
 
     public function edit(Presence $presence)
     {

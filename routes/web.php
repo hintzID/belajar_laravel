@@ -36,6 +36,15 @@ Route::resource('/tests', \App\Http\Controllers\TestController::class);
 Route::resource('/schedules', \App\Http\Controllers\ScheduleController::class);
 Route::resource('/presences', \App\Http\Controllers\PresenceController::class);
 
+Route::resource('/formidbcs', \App\Http\Controllers\FormidbcController::class);
+
+
+
+
+
+
+
+
 
 Auth::routes();
 

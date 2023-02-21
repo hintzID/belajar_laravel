@@ -37,8 +37,8 @@
                                 <tr>
                                     <td>{{ $student->number }}</td>
                                     <td>{{ $student->name }}</td>
-                                    <td class="text-center">
-                                        <img src="{{ Storage::url('public/students/').$student->image }}" class="rounded" style="width: 150px">
+                                    <td class="text-center" style="width: 50px">
+                                        <img src="{{ Storage::url('public/students/').$student->image }}" class="rounded" style="width:100%;">
                                     </td>
                                     <td>{{ $student->email }}</td>
                                     <td>{{ $student->phone }}</td>
