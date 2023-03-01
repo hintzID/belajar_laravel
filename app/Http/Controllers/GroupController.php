@@ -10,9 +10,10 @@ class GroupController extends Controller
 {
     public function index()
     {
-        $groups = Group::all();
+        $groups = Group::where('user_id', auth()->user()->id)->get();
         return view('groups.index', compact('groups'));
     }
+    
 
     public function create()
     {
@@ -21,10 +22,12 @@ class GroupController extends Controller
 
     public function store(Request $request)
     {
-        Group::create($request->all());
+        $group = new Group($request->all());
+        $group->user_id = $request->user_id;
+        $group->save();
         return redirect()->route('groups.index');
     }
-
+    
     public function edit(Group $group)
     {
         return view('groups.edit', compact('group'));
@@ -32,9 +35,10 @@ class GroupController extends Controller
 
     public function update(Request $request, Group $group)
     {
-        $group->update($request->all());
+        $group->update($request->except('user_id'));
         return redirect()->route('groups.index');
     }
+    
 
     public function destroy(Group $group)
     {

@@ -142,15 +142,15 @@
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/questions">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Current month
+              Quiz
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/answers">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Last quarter
+              Answer
             </a>
           </li>
           <li class="nav-item">
@@ -163,6 +163,12 @@
             <a class="nav-link" href="#">
               <span data-feather="file-text" class="align-text-bottom"></span>
               Year-end sale
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/quiz">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Quiz
             </a>
           </li>
         </ul>

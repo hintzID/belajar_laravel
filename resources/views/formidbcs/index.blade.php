@@ -18,6 +18,7 @@
                                 <th>Kelas</th>
                                 <th>Kehadiran</th>
                                 <th>Catatan</th>
+                                <th>Waktu</th>
                                 <th colspan="3">Aksi</th>
                             </tr>
                         </thead>
@@ -29,6 +30,7 @@
                                 <td>{{ $formidbc->getGroupNameAttribute() }}</td>
                                 <td>{{ $formidbc->presence }}</td>
                                 <td>{{ $formidbc->note }}</td>
+                                <td>{{ $formidbc->created_at_custom }}</td>
                                 <td>
 
     <a href="{{ route('formidbcs.edit', $formidbc->id) }}" class="btn btn-success">Ubah</a>

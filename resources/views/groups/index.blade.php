@@ -34,7 +34,7 @@
                               @forelse ($groups as $group)
                                 <tr>
                                     <td>{{ $group->id}}</td>
-                                    <td>{{ $group->user_id }}</td>
+                                    <td>{{ $group->user->name }}</td>
                                     <td>{{ $group->name }}</td>
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('groups.destroy', $group->id) }}" method="POST">
