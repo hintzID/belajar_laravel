@@ -52,3 +52,4 @@ public function store(Request $request)
         return redirect()->route('presences.index');
     }
 }
+

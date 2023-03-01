@@ -70,8 +70,9 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div>n
         </div>
     </div>
 </div>
 @endsection
+

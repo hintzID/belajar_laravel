@@ -2,6 +2,8 @@
 
 @section('content')
 
+@section('title', 'Data Murid per Kelas')
+
 <a href="{{ route('members.create') }}" class="btn btn-success">Add member</a>
 <br>
 <br>

@@ -38,6 +38,7 @@ Route::resource('/presences', \App\Http\Controllers\PresenceController::class);
 
 Route::resource('/formidbcs', \App\Http\Controllers\FormidbcController::class);
 Route::resource('/questions', \App\Http\Controllers\QuestionController::class);
+Route::resource('/answers', \App\Http\Controllers\AnswerController::class);
 
 
 

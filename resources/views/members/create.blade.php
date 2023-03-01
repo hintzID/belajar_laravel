@@ -2,6 +2,8 @@
 
 @section('content')
 
+@section('title', 'Tambah Data Murid per Kelas')
+
 <form action="{{ route('members.store') }}" method="post">
     @csrf
     <label for="student_id">Student ID</label>

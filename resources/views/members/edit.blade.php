@@ -2,6 +2,8 @@
 
 @section('content')
 
+@section('title', 'Edit Data Murid per Kelas')
+
 <form action="{{ route('members.update', $member->id) }}" method="post">
     @csrf
     @method('patch')
