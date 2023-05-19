@@ -40,6 +40,11 @@
         <textarea name="note[{{ $member->id }}]" class="form-control"></textarea>
     </div>
 </td>
+<td>
+    <div class="form-group">
+        <textarea name="note[{{ $member->id }}]" class="form-control"></textarea>
+    </div>
+</td>
 
 
                                 </tr>
